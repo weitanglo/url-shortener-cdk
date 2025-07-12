@@ -17,7 +17,7 @@ const env = {
   region: config.region,
 };
 
-// Database Stack
+// Database Stack (拡張版)
 const databaseStack = new DatabaseStack(app, `UrlShortener-Database-${config.stageName}`, {
   env,
   stageName: config.stageName,
@@ -32,7 +32,7 @@ const securityStack = new SecurityStack(app, `UrlShortener-Security-${config.sta
   userTableArn: databaseStack.userTable.tableArn,
 });
 
-// API Stack (includes Lambda functions)
+// API Stack (includes Lambda functions + URL Info features)
 const apiStack = new ApiStack(app, `UrlShortener-Api-${config.stageName}`, {
   env,
   stageName: config.stageName,
@@ -46,6 +46,7 @@ const apiStack = new ApiStack(app, `UrlShortener-Api-${config.stageName}`, {
   lambdaRole: securityStack.lambdaRole,
   urlShortnerTable: databaseStack.urlShortnerTable,
   userTable: databaseStack.userTable,
+  urlInfoTable: databaseStack.urlInfoTable, // 新規追加
 });
 
 // Stack dependencies
@@ -57,3 +58,4 @@ cdk.Tags.of(app).add('Project', 'UrlShortener');
 cdk.Tags.of(app).add('Environment', config.stageName);
 cdk.Tags.of(app).add('BuiltWith', 'Amazon-Q-Developer');
 cdk.Tags.of(app).add('CreatedBy', 'Amazon-Q-Developer-AI-Assistant');
+cdk.Tags.of(app).add('Feature', 'URL-Info-Enhanced'); // 新機能タグ
