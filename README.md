@@ -16,7 +16,10 @@ AWS CDK (TypeScript) で構築されたサーバーレスURL短縮サービス�
 📊 **[詳細なアーキテクチャ図を見る](./ARCHITECTURE.md)**  
 🎨 **[ASCII版アーキテクチャ図を見る](./ARCHITECTURE_ASCII.md)**  
 🔧 **[AWS構成図 (draw.io形式)](./AWS_ARCHITECTURE_DIAGRAM.md)**  
-📈 **[Mermaid構成図](./AWS_MERMAID_DIAGRAM.md)**
+📈 **[Mermaid構成図](./AWS_MERMAID_DIAGRAM.md)**  
+🎯 **[AWS公式アイコン構成図](./AWS_OFFICIAL_ICONS_DIAGRAM.md)**  
+🎨 **[draw.io用Mermaid図](./AWS_DRAWIO_MERMAID.md)**  
+📋 **[AWS公式アイコンガイド](./AWS_ICONS_GUIDE.md)**
 
 ### 技術スタック
 - **フレームワーク**: AWS CDK (TypeScript)
