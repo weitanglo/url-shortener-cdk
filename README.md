@@ -14,7 +14,9 @@ AWS CDK (TypeScript) で構築されたサーバーレスURL短縮サービス�
 ## 🏗️ アーキテクチャ
 
 📊 **[詳細なアーキテクチャ図を見る](./ARCHITECTURE.md)**  
-🎨 **[ASCII版アーキテクチャ図を見る](./ARCHITECTURE_ASCII.md)**
+🎨 **[ASCII版アーキテクチャ図を見る](./ARCHITECTURE_ASCII.md)**  
+🔧 **[AWS構成図 (draw.io形式)](./AWS_ARCHITECTURE_DIAGRAM.md)**  
+📈 **[Mermaid構成図](./AWS_MERMAID_DIAGRAM.md)**
 
 ### 技術スタック
 - **フレームワーク**: AWS CDK (TypeScript)
@@ -84,6 +86,8 @@ url-shortener-cdk/
 │   └── config.ts               # 環境別設定
 ├── ARCHITECTURE.md             # 詳細アーキテクチャ図
 ├── ARCHITECTURE_ASCII.md       # ASCII版アーキテクチャ図
+├── AWS_ARCHITECTURE_DIAGRAM.md # 🆕 AWS構成図 (draw.io形式)
+├── AWS_MERMAID_DIAGRAM.md      # 🆕 Mermaid構成図
 ├── AMAZON_Q_DEVELOPER.md       # AI生成詳細
 └── test/                       # テストファイル
 ```
@@ -330,7 +334,11 @@ npx cdk destroy --all
 
 ### 📚 ドキュメント
 - README.md (完全版)
-- アーキテクチャ図 (Mermaid + ASCII)
+- アーキテクチャ図 (4種類)
+  - Mermaid形式
+  - ASCII形式
+  - draw.io形式
+  - テキスト形式
 - API仕様書
 - デプロイ手順
 
